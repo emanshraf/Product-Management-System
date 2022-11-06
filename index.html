@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product system</title>
+    <link rel="stylesheet" href="product.css"/>
+</head>
+<body>
+    <div class="cruds">
+        
+        <header>
+            <p>Product Mangement System</p>
+        </header>
+
+        <div class="inputs">
+            <input placeholder="title" type="text"  id="title"/>
+
+            <div class="price">
+                <input onkeyup="getTotal()" placeholder="price" type="number" id="price"/>
+                <input onkeyup="getTotal()" placeholder="texes" type="number" id="texes"/>
+                <input onkeyup="getTotal()" placeholder="ads" type="number" id="ads"/>
+                <input onkeyup="getTotal()" placeholder="discount" type="number" id="discount"/>
+                <small id="total"></small>
+            </div>
+
+            <input placeholder="count" type="number" id="count"/>
+            <input placeholder="category" type="text" id="category"/>
+            <button id="submit">Creat</button>
+
+        </div>
+
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="Saerch By Title" id="search"/>
+                <div class="btnsearch">
+                    <button onclick="getSearchMoode(this.id)" id="saerchTitle">Saerch By Title</button>
+                    <button onclick="getSearchMoode(this.id)" id="saerchCategory">Saerch By Category</button>
+                </div>
+            </div>
+
+            <div id="deletAll"></div>
+
+            <table class="table1">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Adj</th>
+                    <th>Texes</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delet</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+            </table>
+        </div>   
+    </div>
+    
+   <script src="product.js" ></script>
+  
+</body>
+</html>
